@@ -66,7 +66,7 @@
 
 - 最后的效果
 
-```shell
+```objective-c
 MJPerson *person = [[MJPerson alloc] init];
 [person mj_run];
 [person mj_setupName:@"jack" mj_no:20 mj_age:21];
@@ -116,7 +116,7 @@ const MJEncryptStringData * const _761622619 = &(MJEncryptStringData){
 
 - 在项目中的使用
 
-```
+```objective-c
 #import "MJEncryptString.h"
 
 NSString *str1 = mj_OCString(_761622619);
