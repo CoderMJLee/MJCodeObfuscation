@@ -3,6 +3,7 @@
 
 - 主要是利用`libclang`解析扫描源代码的语法树，搜索出所有的类名、方法名、字符串
 - 语法树解析的核心代码是：`MJCodeObfuscation/Classes/Tool/MJClangTool.m`，比较简单，不复杂
+- 这仅仅是个Demo，大家可以根据自己需要去调整代码，比如混淆协议、属性等等，可以自行添加实现
 
 
 
@@ -79,7 +80,7 @@ MJPerson *person = [[MJPerson alloc] init];
 
 ## 字符串加密（方式1）
 
-> 将字符串进行了一个简单的异或处理（开发者可以自行制定加密算法）
+> 仅仅是将字符串进行了一个简单的异或处理（开发者可以自行制定加密算法）
 
 - 假设想对以下的C、OC字符串进行加密
 
@@ -153,7 +154,7 @@ NSLog(@"%@ %s", str1, str2);
 ```
 
 - `MJEncryptStringData.h`文件内容如下所示
-  - 它将项目里的"%@ %s"、"小码哥mj123go" 字符串都进行了加密
+  - 它将项目里的`"%@ %s"`、`"小码哥mj123go"`字符串都进行了加密
 
 ```objective-c
 #ifndef MJEncryptStringData_h
