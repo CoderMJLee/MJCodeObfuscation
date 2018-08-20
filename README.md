@@ -1,0 +1,2 @@
+# MJCodeObfuscation
+一个用于代码混淆和字符串加密的Mac小Demo
