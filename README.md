@@ -3,7 +3,10 @@
 
 - 主要是利用`libclang`解析扫描源代码的语法树，搜索出所有的类名、方法名、字符串
 - 语法树解析的核心代码是：`MJCodeObfuscation/Classes/Tool/MJClangTool.m`，比较简单，不复杂
-- 这仅仅是个Demo，大家可以根据自己需要去调整代码，比如混淆协议、属性等等，可以自行添加实现
+- 这仅仅是个小Demo，大家可以根据自己需要去调整代码，比如混淆协议、属性等等，可以自行添加实现
+- 更多混淆相关，可以参考开源项目
+  - [ios-class-guard](https://github.com/Polidea/ios-class-guard)
+  - [ollvm](https://github.com/obfuscator-llvm/obfuscator)
 
 
 
