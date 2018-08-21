@@ -160,20 +160,18 @@
     
     !progress ? : progress(@"正在混淆...");
     NSMutableString *fileContent = [NSMutableString string];
+    [fileContent appendString:@"#ifndef MJCodeObfuscation_h\n"];
+    [fileContent appendString:@"#define MJCodeObfuscation_h\n"];
     NSMutableArray *obfuscations = [NSMutableArray array];
-    int index = 0;
     for (NSString *token in set) {
         NSString *obfuscation = nil;
         while (!obfuscation || [obfuscations containsObject:obfuscation]) {
             obfuscation = [NSString mj_randomStringWithoutDigitalWithLength:16];
         }
         
-        [fileContent appendFormat:@"#define %@ %@", token, obfuscation];
-        
-        if (++index != set.count) {
-            [fileContent appendString:@"\n"];
-        }
+        [fileContent appendFormat:@"#define %@ %@\n", token, obfuscation];
     }
+    [fileContent appendString:@"#endif"];
     
     !progress ? : progress(@"混淆完毕!");
     completion(fileContent);
